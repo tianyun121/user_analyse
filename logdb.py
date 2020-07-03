@@ -36,6 +36,10 @@ def run_pro():
         driver = webdriver.Chrome(chromedriver,options=chrome_options) #模拟打开浏览器
         driver.get(r"http://172.27.2.8:8080/webroot/decision/view/report?viewlet=%E7%9B%91%E6%8E%A7%E6%98%8E%E7%BB%86.cpt&op=write") #打开网址
         time.sleep(30) #页面加载休眠时间
+
+        ####
+
+        ####
         if (len(driver.find_elements_by_xpath('//table[@id="0"]')) == 0):
             print("未访问到界面", time.strftime('%Y.%m.%d %H:%M:%S ', time.localtime(time.time())))
         else:
